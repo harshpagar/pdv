@@ -1,0 +1,60 @@
+.main{
+    height: 100px;
+    width: auto;
+    background-color: black;
+}
+.but{
+    margin-left: 500px;
+    margin-top: 28px;
+}
+.one{
+    height:30px;
+    width:120px;
+    color: white;
+    background-color: rgb(109, 36, 178);
+    border-radius: 8px;
+}
+.one:hover {
+    background-color: white;
+    color: rgb(109, 36, 178);
+  }
+.two{
+    height:30px;
+    width:120px;
+    margin-left: 20px;
+    color: white;
+    background-color: rgb(109, 36, 178);
+    border-radius: 8px;
+
+}
+.two:hover {
+    background-color: white;
+    color: rgb(109, 36, 178);
+
+}
+.three{
+    height:30px;
+    width:120px;
+    margin-left: 20px;
+    color: white;
+    background-color: rgb(109, 36, 178);
+    border-radius: 8px;
+}
+.three:hover {
+    background-color: white;
+    color: rgb(109, 36, 178);
+
+  }
+.four{
+    height:30px;
+    width:100px;
+    margin-left: 20px;
+    color: white;
+    background-color: rgb(109, 36, 178);
+    border-radius: 8px;
+}
+.four:hover {
+    background-color: white;
+    color: rgb(109, 36, 178);
+
+  }
