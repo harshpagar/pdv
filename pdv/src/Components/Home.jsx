@@ -16,11 +16,14 @@ export const  Home = () =>
                 <span >Prospect Set</span><br/>
             </div>
            <div className="top">
-                <span>Customer</span>
-                <span>Prospect Customer</span>
-                <span>Employee</span>
-                <span>Test Set</span>
-           </div>
+                <span className="cus">Customer</span>
+                <span className="cus">Prospect Customer</span>
+                <span className="cus">Employee</span>
+                <span className="cus">Test Set</span>
+            </div>
+            <div className="search">
+                <input className="srch" type="search" placeholder="Search"></input>
+            </div>               
            
         </div>
 

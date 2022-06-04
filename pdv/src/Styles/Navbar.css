@@ -32,29 +32,3 @@
     color: rgb(109, 36, 178);
 
 }
-.three{
-    height:30px;
-    width:120px;
-    margin-left: 20px;
-    color: white;
-    background-color: rgb(109, 36, 178);
-    border-radius: 8px;
-}
-.three:hover {
-    background-color: white;
-    color: rgb(109, 36, 178);
-
-  }
-.four{
-    height:30px;
-    width:100px;
-    margin-left: 20px;
-    color: white;
-    background-color: rgb(109, 36, 178);
-    border-radius: 8px;
-}
-.four:hover {
-    background-color: white;
-    color: rgb(109, 36, 178);
-
-  }
