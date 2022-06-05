@@ -18,6 +18,8 @@ export const  Home = () =>
 
     })
 
+    
+
     const [records , setRecords] = useState([])
 
     const handleInput =(e) => {
@@ -65,7 +67,7 @@ export const  Home = () =>
                 <span className="cus">Test Set</span>
             </div>
             <div className="search">
-                <input className="srch" type="search" placeholder="Search"></input>
+                <input className="srch" type="Search  " placeholder="Search Prospect Set"></input>
             </div>               
 
             <div className="head">
