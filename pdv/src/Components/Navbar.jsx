@@ -11,7 +11,6 @@ export const Navbar = () => {
           <button className="two">Email template </button>
           <button className="three">Prospect Set </button>
           <button className="two">Campaign </button>
-          
         </div>
       </div>
     </>

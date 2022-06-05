@@ -3,7 +3,7 @@ import "../Styles/Home.css";
 import { Navbar } from "./Navbar";
 import { useState } from "react";
 import Button from "@mui/material/Button";
-import axios from 'axios';
+import axios from "axios";
 export const Home = () => {
   const [user, setUser] = useState({
     name: "",
@@ -19,10 +19,10 @@ export const Home = () => {
     setModal(!modal);
   };
 
-  if(modal) {
-    document.body.classList.add('active-modal')
+  if (modal) {
+    document.body.classList.add("active-modal");
   } else {
-    document.body.classList.remove('active-modal')
+    document.body.classList.remove("active-modal");
   }
   const [records, setRecords] = useState([]);
 
@@ -34,27 +34,28 @@ export const Home = () => {
     setUser({ ...user, [name]: value });
   };
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    alert("enter in send data")
+    e.preventDefault();
+    alert("enter in send data");
     const userObject = {
-        name: user.name,
-        demo: user.demo,
-        source: user.source,
-        addedby:user.addedby,
-        date: user.date,
-        set: user.set,
-        howmany: user.howmany,
+      name: user.name,
+      demo: user.demo,
+      source: user.source,
+      addedby: user.addedby,
+      date: user.date,
+      set: user.set,
+      howmany: user.howmany,
     };
-    console.log("userObject",userObject)
-   
-    
-   axios.post('http://localhost:4000/addname', userObject)
-   .then((res) => {
-       console.log("resut",res.data)
-   }).catch((error) => {
-       console.log(error)
-   });
-   setUser({
+    console.log("userObject", userObject);
+
+    axios
+      .post("http://localhost:4000/addname", userObject)
+      .then((res) => {
+        console.log("resut", res.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    setUser({
       name: "",
       demo: "",
       source: "",
@@ -63,105 +64,106 @@ export const Home = () => {
       set: "",
       howmany: "",
     });
-    getDataHandler()
+    getDataHandler();
   };
 
-  const getDataHandler=()=>{
-      axios.get('http://localhost:4000/all')
+  const getDataHandler = () => {
+    axios
+      .get("http://localhost:4000/all")
       .then((res) => {
-        console.log("resut",res.data)
-        setRecords(res.data)
-    }).catch((error) => {
-        console.log(error)
-    });
-  }
+        console.log("resut", res.data);
+        setRecords(res.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
-  useEffect(()=>{
-    getDataHandler()
-  },[])
+  useEffect(() => {
+    getDataHandler();
+  }, []);
   return (
     <>
       <Navbar />
-     
+
       {modal && (
         <div className="modal">
           <div onClick={toggleModal} className="overlay"></div>
           <div className="modal-content">
-              <form action="" onSubmit={handleSubmit}>
-        <h1>Add Prospect Set</h1>
-        <input
-          type={"text "}
-          value={user.name}
-          onChange={handleInput}
-          placeholder="Name Prospect Set "
-          name="name"
-        ></input>
-        <br />
-        <input
-          type={"text"}
-          value={user.demo}
-          onChange={handleInput}
-          placeholder="Add Demographic "
-          name="demo"
-        ></input>
-        <br />
-        <input
-          type={"text"}
-          value={user.source}
-          onChange={handleInput}
-          placeholder="Source "
-          name="source"
-        ></input>
-        <br />
-        <input
-          type={"text"}
-          value={user.addedby}
-          onChange={handleInput}
-          placeholder="addedby "
-          name="addedby"
-        ></input>
-        <br />
-        <input
-          type={"date"}
-          value={user.date}
-          onChange={handleInput}
-          name="date"
-        ></input>
-        <br />
-        <input
-          type={"text"}
-          value={user.set}
-          onChange={handleInput}
-          placeholder="Set Type "
-          name="set"
-        ></input>
-        <br />
-        <input
-          type={"number"}
-          value={user.howmany}
-          onChange={handleInput}
-          placeholder="How Many"
-          name="howmany"
-        ></input>
-        <br />
-        <Button
-          type="submit"
-          variant="outlined"
-          style={{
-            marginTop: "10px",
-            color: "white",
-            backgroundColor: "black",
-            width: 200,
-            marginBottom: "5px",
-          }}
-        >
-          Add Prospect Set
-        </Button>
-      </form>
-              </div>
-              </div>
+            <form action="" onSubmit={handleSubmit}>
+              <h1>Add Prospect Set</h1>
+              <input className="nam"
+                type={"text "}
+                value={user.name}
+                onChange={handleInput}
+                placeholder="Name Prospect Set "
+                name="name"
+              ></input>
+              <br />
+              <input  className="nam"
+                type={"text"}
+                value={user.demo}
+                onChange={handleInput}
+                placeholder="Add Demographic "
+                name="demo"
+              ></input>
+              <br />
+              <input  className="nam"
+                type={"text"}
+                value={user.source}
+                onChange={handleInput}
+                placeholder="Source "
+                name="source"
+              ></input>
+              <br />
+              <input  className="nam"
+                type={"text"}
+                value={user.addedby}
+                onChange={handleInput}
+                placeholder="addedby "
+                name="addedby"
+              ></input>
+              <br />
+              <input  className="nam"
+                type={"date"}
+                value={user.date}
+                onChange={handleInput}
+                name="date"
+              ></input>
+              <br />
+              <input  className="nam"
+                type={"text"}
+                value={user.set}
+                onChange={handleInput}
+                placeholder="Set Type "
+                name="set"
+              ></input>
+              <br />
+              <input  className="nam"
+                type={"number"}
+                value={user.howmany}
+                onChange={handleInput}
+                placeholder="How Many"
+                name="howmany"
+              ></input>
+              <br />
+              <Button
+                type="submit"
+                variant="outlined"
+                style={{
+                  marginTop: "10px",
+                  color: "white",
+                  backgroundColor: "black",
+                  width: 200,
+                  marginBottom: "5px",
+                }}
+              >
+                Add Prospect Set
+              </Button>
+            </form>
+          </div>
+        </div>
       )}
-      
 
       <div className="table">
         <div className="name">
@@ -196,7 +198,7 @@ export const Home = () => {
           {records.map((curElem) => {
             return (
               <div className="navbar1">
-                <p>{curElem.name}</p>
+                <p>☐ {curElem.name}</p>
                 <p>{curElem.demo}</p>
                 <p>{curElem.source}</p>
                 <p>{curElem.addedby}</p>
@@ -209,7 +211,9 @@ export const Home = () => {
           })}
         </div>
         <div className="bottom">
-          <span className="bot"  onClick={toggleModal}>Add Prospect Set</span>
+          <span className="bot" onClick={toggleModal}>
+            Add Prospect Set
+          </span>
           <span className="bot">Delete Prospect Set</span>
           <span className="bot">Edit Prospect Set</span>
           <span className="bot">Import Prospect Set</span>
