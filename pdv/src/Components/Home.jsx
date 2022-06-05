@@ -36,7 +36,6 @@ export const Home = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     alert("enter in send data")
-    // const {name,demo,source,addedby,date,set,howmany}=user;
     const userObject = {
         name: user.name,
         demo: user.demo,
@@ -47,20 +46,7 @@ export const Home = () => {
         howmany: user.howmany,
     };
     console.log("userObject",userObject)
-    // const newData = { ...user };
-    // console.log("records",records);
-    // setRecords([...records, newData]);
-    // console.log("records1",records[0]);
-
-    // setUser({
-    //   name: "",
-    //   demo: "",
-    //   source: "",
-    //   addedby: "",
-    //   date: "",
-    //   set: "",
-    //   howmany: "",
-    // });
+   
     
    axios.post('http://localhost:4000/addname', userObject)
    .then((res) => {
@@ -96,9 +82,7 @@ export const Home = () => {
   return (
     <>
       <Navbar />
-      {/* <button onClick={toggleModal} className="btn-modal">
-        Open
-      </button> */}
+     
       {modal && (
         <div className="modal">
           <div onClick={toggleModal} className="overlay"></div>
@@ -138,7 +122,7 @@ export const Home = () => {
         ></input>
         <br />
         <input
-          type={"number"}
+          type={"date"}
           value={user.date}
           onChange={handleInput}
           name="date"
@@ -149,7 +133,7 @@ export const Home = () => {
           value={user.set}
           onChange={handleInput}
           placeholder="Set Type "
-          name="Set"
+          name="set"
         ></input>
         <br />
         <input
@@ -217,7 +201,7 @@ export const Home = () => {
                 <p>{curElem.source}</p>
                 <p>{curElem.addedby}</p>
                 <p>{curElem.date}</p>
-                <p>{curElem.Set}</p>
+                <p>{curElem.set}</p>
                 <p>{curElem.howmany}</p>
                 <p>Info</p>
               </div>
