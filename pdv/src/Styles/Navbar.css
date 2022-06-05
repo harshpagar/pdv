@@ -32,3 +32,11 @@
     color: rgb(109, 36, 178);
 
 }
+.three{
+    height:30px;
+    width:120px;
+    margin-left: 20px;
+    color: rgb(109, 36, 178);
+    background-color: white;
+    border-radius: 8px;
+}
