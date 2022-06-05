@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import "../Styles/Home.css";
-import { Navbar } from "./Navbar";
 import { useState } from "react";
 import Button from "@mui/material/Button";
 import axios from "axios";
@@ -84,7 +83,7 @@ export const Home = () => {
   }, []);
   return (
     <>
-      <Navbar />
+     
 
       {modal && (
         <div className="modal">
